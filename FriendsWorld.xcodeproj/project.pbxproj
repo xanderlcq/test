@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0A4DC0F1DAC7CF400A1A478 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC0E1DAC7CF400A1A478 /* main.m */; };
+		C0A4DC121DAC7CF400A1A478 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC111DAC7CF400A1A478 /* AppDelegate.m */; };
+		C0A4DC151DAC7CF400A1A478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC141DAC7CF400A1A478 /* ViewController.m */; };
+		C0A4DC181DAC7CF400A1A478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4DC161DAC7CF400A1A478 /* Main.storyboard */; };
+		C0A4DC1A1DAC7CF400A1A478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A4DC191DAC7CF400A1A478 /* Assets.xcassets */; };
+		C0A4DC1D1DAC7CF400A1A478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4DC1B1DAC7CF400A1A478 /* LaunchScreen.storyboard */; };
+		C0A4DC281DAC7CF400A1A478 /* FriendsWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC271DAC7CF400A1A478 /* FriendsWorldTests.m */; };
+		C0A4DC331DAC7CF400A1A478 /* FriendsWorldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC321DAC7CF400A1A478 /* FriendsWorldUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0A4DC241DAC7CF400A1A478 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0A4DC021DAC7CF400A1A478 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0A4DC091DAC7CF400A1A478;
+			remoteInfo = FriendsWorld;
+		};
+		C0A4DC2F1DAC7CF400A1A478 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0A4DC021DAC7CF400A1A478 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0A4DC091DAC7CF400A1A478;
+			remoteInfo = FriendsWorld;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C0A4DC0A1DAC7CF400A1A478 /* FriendsWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A4DC0E1DAC7CF400A1A478 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C0A4DC101DAC7CF400A1A478 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C0A4DC111DAC7CF400A1A478 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C0A4DC131DAC7CF400A1A478 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C0A4DC141DAC7CF400A1A478 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C0A4DC171DAC7CF400A1A478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0A4DC191DAC7CF400A1A478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0A4DC1C1DAC7CF400A1A478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C0A4DC1E1DAC7CF400A1A478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0A4DC231DAC7CF400A1A478 /* FriendsWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A4DC271DAC7CF400A1A478 /* FriendsWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsWorldTests.m; sourceTree = "<group>"; };
+		C0A4DC291DAC7CF400A1A478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0A4DC2E1DAC7CF400A1A478 /* FriendsWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A4DC321DAC7CF400A1A478 /* FriendsWorldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsWorldUITests.m; sourceTree = "<group>"; };
+		C0A4DC341DAC7CF400A1A478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0A4DC071DAC7CF400A1A478 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A4DC201DAC7CF400A1A478 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A4DC2B1DAC7CF400A1A478 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0A4DC011DAC7CF400A1A478 = {
+			isa = PBXGroup;
+			children = (
+				C0A4DC0C1DAC7CF400A1A478 /* FriendsWorld */,
+				C0A4DC261DAC7CF400A1A478 /* FriendsWorldTests */,
+				C0A4DC311DAC7CF400A1A478 /* FriendsWorldUITests */,
+				C0A4DC0B1DAC7CF400A1A478 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0A4DC0B1DAC7CF400A1A478 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0A4DC0A1DAC7CF400A1A478 /* FriendsWorld.app */,
+				C0A4DC231DAC7CF400A1A478 /* FriendsWorldTests.xctest */,
+				C0A4DC2E1DAC7CF400A1A478 /* FriendsWorldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0A4DC0C1DAC7CF400A1A478 /* FriendsWorld */ = {
+			isa = PBXGroup;
+			children = (
+				C0A4DC101DAC7CF400A1A478 /* AppDelegate.h */,
+				C0A4DC111DAC7CF400A1A478 /* AppDelegate.m */,
+				C0A4DC131DAC7CF400A1A478 /* ViewController.h */,
+				C0A4DC141DAC7CF400A1A478 /* ViewController.m */,
+				C0A4DC161DAC7CF400A1A478 /* Main.storyboard */,
+				C0A4DC191DAC7CF400A1A478 /* Assets.xcassets */,
+				C0A4DC1B1DAC7CF400A1A478 /* LaunchScreen.storyboard */,
+				C0A4DC1E1DAC7CF400A1A478 /* Info.plist */,
+				C0A4DC0D1DAC7CF400A1A478 /* Supporting Files */,
+			);
+			path = FriendsWorld;
+			sourceTree = "<group>";
+		};
+		C0A4DC0D1DAC7CF400A1A478 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0A4DC0E1DAC7CF400A1A478 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0A4DC261DAC7CF400A1A478 /* FriendsWorldTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0A4DC271DAC7CF400A1A478 /* FriendsWorldTests.m */,
+				C0A4DC291DAC7CF400A1A478 /* Info.plist */,
+			);
+			path = FriendsWorldTests;
+			sourceTree = "<group>";
+		};
+		C0A4DC311DAC7CF400A1A478 /* FriendsWorldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C0A4DC321DAC7CF400A1A478 /* FriendsWorldUITests.m */,
+				C0A4DC341DAC7CF400A1A478 /* Info.plist */,
+			);
+			path = FriendsWorldUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0A4DC091DAC7CF400A1A478 /* FriendsWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0A4DC371DAC7CF400A1A478 /* Build configuration list for PBXNativeTarget "FriendsWorld" */;
+			buildPhases = (
+				C0A4DC061DAC7CF400A1A478 /* Sources */,
+				C0A4DC071DAC7CF400A1A478 /* Frameworks */,
+				C0A4DC081DAC7CF400A1A478 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FriendsWorld;
+			productName = FriendsWorld;
+			productReference = C0A4DC0A1DAC7CF400A1A478 /* FriendsWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C0A4DC221DAC7CF400A1A478 /* FriendsWorldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0A4DC3A1DAC7CF400A1A478 /* Build configuration list for PBXNativeTarget "FriendsWorldTests" */;
+			buildPhases = (
+				C0A4DC1F1DAC7CF400A1A478 /* Sources */,
+				C0A4DC201DAC7CF400A1A478 /* Frameworks */,
+				C0A4DC211DAC7CF400A1A478 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0A4DC251DAC7CF400A1A478 /* PBXTargetDependency */,
+			);
+			name = FriendsWorldTests;
+			productName = FriendsWorldTests;
+			productReference = C0A4DC231DAC7CF400A1A478 /* FriendsWorldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C0A4DC2D1DAC7CF400A1A478 /* FriendsWorldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0A4DC3D1DAC7CF400A1A478 /* Build configuration list for PBXNativeTarget "FriendsWorldUITests" */;
+			buildPhases = (
+				C0A4DC2A1DAC7CF400A1A478 /* Sources */,
+				C0A4DC2B1DAC7CF400A1A478 /* Frameworks */,
+				C0A4DC2C1DAC7CF400A1A478 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0A4DC301DAC7CF400A1A478 /* PBXTargetDependency */,
+			);
+			name = FriendsWorldUITests;
+			productName = FriendsWorldUITests;
+			productReference = C0A4DC2E1DAC7CF400A1A478 /* FriendsWorldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0A4DC021DAC7CF400A1A478 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Xander;
+				TargetAttributes = {
+					C0A4DC091DAC7CF400A1A478 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					C0A4DC221DAC7CF400A1A478 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C0A4DC091DAC7CF400A1A478;
+					};
+					C0A4DC2D1DAC7CF400A1A478 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C0A4DC091DAC7CF400A1A478;
+					};
+				};
+			};
+			buildConfigurationList = C0A4DC051DAC7CF400A1A478 /* Build configuration list for PBXProject "FriendsWorld" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0A4DC011DAC7CF400A1A478;
+			productRefGroup = C0A4DC0B1DAC7CF400A1A478 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0A4DC091DAC7CF400A1A478 /* FriendsWorld */,
+				C0A4DC221DAC7CF400A1A478 /* FriendsWorldTests */,
+				C0A4DC2D1DAC7CF400A1A478 /* FriendsWorldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0A4DC081DAC7CF400A1A478 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A4DC1D1DAC7CF400A1A478 /* LaunchScreen.storyboard in Resources */,
+				C0A4DC1A1DAC7CF400A1A478 /* Assets.xcassets in Resources */,
+				C0A4DC181DAC7CF400A1A478 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A4DC211DAC7CF400A1A478 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A4DC2C1DAC7CF400A1A478 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0A4DC061DAC7CF400A1A478 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A4DC151DAC7CF400A1A478 /* ViewController.m in Sources */,
+				C0A4DC121DAC7CF400A1A478 /* AppDelegate.m in Sources */,
+				C0A4DC0F1DAC7CF400A1A478 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A4DC1F1DAC7CF400A1A478 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A4DC281DAC7CF400A1A478 /* FriendsWorldTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A4DC2A1DAC7CF400A1A478 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A4DC331DAC7CF400A1A478 /* FriendsWorldUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0A4DC251DAC7CF400A1A478 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0A4DC091DAC7CF400A1A478 /* FriendsWorld */;
+			targetProxy = C0A4DC241DAC7CF400A1A478 /* PBXContainerItemProxy */;
+		};
+		C0A4DC301DAC7CF400A1A478 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0A4DC091DAC7CF400A1A478 /* FriendsWorld */;
+			targetProxy = C0A4DC2F1DAC7CF400A1A478 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C0A4DC161DAC7CF400A1A478 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0A4DC171DAC7CF400A1A478 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C0A4DC1B1DAC7CF400A1A478 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0A4DC1C1DAC7CF400A1A478 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0A4DC351DAC7CF400A1A478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0A4DC361DAC7CF400A1A478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0A4DC381DAC7CF400A1A478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FriendsWorld/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xanderli.FriendsWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C0A4DC391DAC7CF400A1A478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FriendsWorld/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xanderli.FriendsWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C0A4DC3B1DAC7CF400A1A478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FriendsWorldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xanderli.FriendsWorldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendsWorld.app/FriendsWorld";
+			};
+			name = Debug;
+		};
+		C0A4DC3C1DAC7CF400A1A478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FriendsWorldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xanderli.FriendsWorldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendsWorld.app/FriendsWorld";
+			};
+			name = Release;
+		};
+		C0A4DC3E1DAC7CF400A1A478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FriendsWorldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xanderli.FriendsWorldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FriendsWorld;
+			};
+			name = Debug;
+		};
+		C0A4DC3F1DAC7CF400A1A478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FriendsWorldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xanderli.FriendsWorldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FriendsWorld;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0A4DC051DAC7CF400A1A478 /* Build configuration list for PBXProject "FriendsWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A4DC351DAC7CF400A1A478 /* Debug */,
+				C0A4DC361DAC7CF400A1A478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0A4DC371DAC7CF400A1A478 /* Build configuration list for PBXNativeTarget "FriendsWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A4DC381DAC7CF400A1A478 /* Debug */,
+				C0A4DC391DAC7CF400A1A478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C0A4DC3A1DAC7CF400A1A478 /* Build configuration list for PBXNativeTarget "FriendsWorldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A4DC3B1DAC7CF400A1A478 /* Debug */,
+				C0A4DC3C1DAC7CF400A1A478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C0A4DC3D1DAC7CF400A1A478 /* Build configuration list for PBXNativeTarget "FriendsWorldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A4DC3E1DAC7CF400A1A478 /* Debug */,
+				C0A4DC3F1DAC7CF400A1A478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0A4DC021DAC7CF400A1A478 /* Project object */;
+}
