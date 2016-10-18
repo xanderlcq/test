@@ -14,6 +14,7 @@
 -(void) addFriend:(Person *) person{
     [friendsList append:person];
 }
+
 -(id) initWithName:( NSString*) name {
     self = [super init];
     if(self){
@@ -24,5 +25,14 @@
 }
 -(LinkedList *) getFriendsList{
     return friendsList;
+}
+-(bool) isFriended:(Person *)p{
+    return [friendsList contains:p];
+}
+-(Person *) getFriendAt:(int)index{
+    return [friendsList getDataAt:index];
+}
+-(int) countFriends{
+    return [friendsList length];
 }
 @end

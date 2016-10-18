@@ -15,6 +15,8 @@
 -(void) addFriend:(Person *) person;
 -(id) initWithName:(NSString *) name;
 -(LinkedList *) getFriendsList;
-
+-(Person *) getFriendAt:(int) index;
+-(bool) isFriended:(Person *) p;
+-(int) countFriends;
 @end
 #endif /* Person_h */
