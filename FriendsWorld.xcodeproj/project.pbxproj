@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0762FDF1DB48D910070D581 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C0762FDE1DB48D910070D581 /* Person.m */; };
 		C0A4DC0F1DAC7CF400A1A478 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC0E1DAC7CF400A1A478 /* main.m */; };
 		C0A4DC121DAC7CF400A1A478 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC111DAC7CF400A1A478 /* AppDelegate.m */; };
 		C0A4DC151DAC7CF400A1A478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC141DAC7CF400A1A478 /* ViewController.m */; };
@@ -15,6 +16,8 @@
 		C0A4DC1D1DAC7CF400A1A478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4DC1B1DAC7CF400A1A478 /* LaunchScreen.storyboard */; };
 		C0A4DC281DAC7CF400A1A478 /* FriendsWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC271DAC7CF400A1A478 /* FriendsWorldTests.m */; };
 		C0A4DC331DAC7CF400A1A478 /* FriendsWorldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC321DAC7CF400A1A478 /* FriendsWorldUITests.m */; };
+		C0A4DC441DAC7D1100A1A478 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC431DAC7D1100A1A478 /* LinkedList.m */; };
+		C0A4DC4B1DAC7EC400A1A478 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4DC4A1DAC7EC400A1A478 /* Node.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0762FDE1DB48D910070D581 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C0762FE01DB48D9C0070D581 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		C0A4DC0A1DAC7CF400A1A478 /* FriendsWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A4DC0E1DAC7CF400A1A478 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C0A4DC101DAC7CF400A1A478 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +56,10 @@
 		C0A4DC2E1DAC7CF400A1A478 /* FriendsWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A4DC321DAC7CF400A1A478 /* FriendsWorldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsWorldUITests.m; sourceTree = "<group>"; };
 		C0A4DC341DAC7CF400A1A478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0A4DC431DAC7D1100A1A478 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
+		C0A4DC451DAC7D1700A1A478 /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		C0A4DC491DAC7EC000A1A478 /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		C0A4DC4A1DAC7EC400A1A478 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +117,12 @@
 				C0A4DC161DAC7CF400A1A478 /* Main.storyboard */,
 				C0A4DC191DAC7CF400A1A478 /* Assets.xcassets */,
 				C0A4DC1B1DAC7CF400A1A478 /* LaunchScreen.storyboard */,
+				C0A4DC431DAC7D1100A1A478 /* LinkedList.m */,
+				C0A4DC491DAC7EC000A1A478 /* Node.h */,
+				C0762FDE1DB48D910070D581 /* Person.m */,
+				C0762FE01DB48D9C0070D581 /* Person.h */,
+				C0A4DC4A1DAC7EC400A1A478 /* Node.m */,
+				C0A4DC451DAC7D1700A1A478 /* LinkedList.h */,
 				C0A4DC1E1DAC7CF400A1A478 /* Info.plist */,
 				C0A4DC0D1DAC7CF400A1A478 /* Supporting Files */,
 			);
@@ -273,9 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0762FDF1DB48D910070D581 /* Person.m in Sources */,
+				C0A4DC4B1DAC7EC400A1A478 /* Node.m in Sources */,
 				C0A4DC151DAC7CF400A1A478 /* ViewController.m in Sources */,
 				C0A4DC121DAC7CF400A1A478 /* AppDelegate.m in Sources */,
 				C0A4DC0F1DAC7CF400A1A478 /* main.m in Sources */,
+				C0A4DC441DAC7D1100A1A478 /* LinkedList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +525,7 @@
 				C0A4DC391DAC7CF400A1A478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0A4DC3A1DAC7CF400A1A478 /* Build configuration list for PBXNativeTarget "FriendsWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +534,7 @@
 				C0A4DC3C1DAC7CF400A1A478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0A4DC3D1DAC7CF400A1A478 /* Build configuration list for PBXNativeTarget "FriendsWorldUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +543,7 @@
 				C0A4DC3F1DAC7CF400A1A478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
