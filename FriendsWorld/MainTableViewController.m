@@ -9,21 +9,14 @@
 #import "MainTableViewController.h"
 
 @interface MainTableViewController ()
-@property NSMutableArray *data;
+
 @end
 
 @implementation MainTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navi.title = self.test;
-    self.world = [[Person alloc] init];
-    
-    
-    self.data = [[NSMutableArray alloc] init];
-    for(int i = 0; i < 30;i++){
-        [self.data addObject:[NSString stringWithFormat:@"%d",i]];
-    }
+    [self cleanUp];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -38,23 +31,30 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    AddFriendViewController *controller = [segue destinationViewController];
-            controller.world = self.world;
-            controller.test = @"haha";
-    NSLog(@"seg triggered");
+    if ([[segue identifier] isEqualToString:@"mainToDetail"]){
+        NSLog(@"seg triggered");
+        PersonDetailViewController *controller = [segue destinationViewController];
+        controller.world = self.world;
+        controller.selectedIndex = [self.tableView indexPathForSelectedRow];
+    }
+    if ([[segue identifier] isEqualToString:@"mainToAddPerson"]){
+        NSLog(@"seg triggered");
+        AddPersonViewController *controller = [segue destinationViewController];
+        controller.world = self.world;
+    }
+  //mainToAddPerson
+    
 }
 
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return [self.data count];
+    return [self.world countFriends];
 }
 
 
@@ -62,11 +62,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [self.data objectAtIndex:indexPath.row];
-    
+    cell.textLabel.text = [self.world getFriendAt:indexPath.row].name;
     return cell;
 }
 
+-(void) cleanUp{
+    for(int i = 0; i < [self.world countFriends];i++){
+        [[self.world getFriendAt:i] cleanUpFriendList];
+    }
+    [self.world cleanUpFriendList];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -102,14 +107,6 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

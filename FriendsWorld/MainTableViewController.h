@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AddFriendViewController.h"
 #import "Person.h"
+#import "PersonDetailViewController.h"
+#import "AddPersonViewController.h"
 @interface MainTableViewController : UITableViewController
 @property Person *world;
-@property (weak, nonatomic) IBOutlet UINavigationItem *navi;
-@property NSString *test;
 
 @end

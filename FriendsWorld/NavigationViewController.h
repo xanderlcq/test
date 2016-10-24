@@ -10,6 +10,5 @@
 #import "Person.h"
 #import "MainTableViewController.h"
 @interface NavigationViewController : UINavigationController
-@property NSString *test;
-@property Person *world;
+@property  (strong, nonatomic) Person *world;
 @end

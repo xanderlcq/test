@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "LinkedList.h"
+#import "Person.h"
 @interface FriendsWorldTests : XCTestCase
 
 @end
@@ -123,6 +124,9 @@
     [l clear];
     XCTAssertEqual([l length], 0);
     XCTAssertFalse([l contains:@"a"]);
+    
+    Person *p = [[Person alloc] initWithName:@"john"];
+    XCTAssertEqual(p.name, @"john");
     
 }
 
