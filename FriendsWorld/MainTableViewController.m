@@ -125,32 +125,4 @@
 }
 
 
-//# pragma mark - Search Controller Delegate (optional)
-//
-//- (void)didDismissSearchController:(UISearchController *)searchController {
-//    
-//    // called when the search controller has been dismissed
-//}
-//
-//- (void)didPresentSearchController:(UISearchController *)searchController {
-//    
-//    // called when the serach controller has been presented
-//}
-//
-//- (void)presentSearchController:(UISearchController *)searchController {
-//    
-//    // if you want to implement your own presentation for how the search controller is shown,
-//    // you can do that here
-//}
-//
-//- (void)willDismissSearchController:(UISearchController *)searchController {
-//    
-//    // called just before the search controller is dismissed
-//}
-//
-//- (void)willPresentSearchController:(UISearchController *)searchController {
-//    
-//    // called just before the search controller is presented
-//}
-
 @end

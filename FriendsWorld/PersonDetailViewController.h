@@ -10,10 +10,14 @@
 #import "Person.h"
 #import "MainTableViewController.h"
 #import "EditDetailsViewController.h"
-@interface PersonDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface PersonDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+    Person *currentPerson;
+}
 
-//@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UILabel *nameOutlet;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navi;
+@property (weak, nonatomic) IBOutlet UITableView *friendsTable;
+@property (weak, nonatomic) IBOutlet UITableView *postsTable;
+
 
 @property Person *world;
 @property NSIndexPath *selectedIndex;

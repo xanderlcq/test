@@ -12,13 +12,12 @@
 
 @end
 
-@implementation PersonDetailViewController{
-    Person *currentPerson;
-}
+@implementation PersonDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.nameOutlet.text = [self.world getFriendAt:self.selectedIndex.row].name;
+    currentPerson = [self.world getFriendAt:(int)self.selectedIndex.row];
+    self.navi.title =currentPerson.name;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,19 +25,30 @@
     // Dispose of any resources that can be recreated.
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self.world getFriendAt:self.selectedIndex.row] countFriends];
-    //return 1;
+    if(tableView == self.friendsTable){
+        return [currentPerson countFriends];
+    }
+    if(tableView == self.postsTable){
+        NSLog(@"%d",[currentPerson countFriendPosts]);
+        return [currentPerson countFriendPosts];
+    }
+    return 0;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.textLabel.text = [[self.world getFriendAt:self.selectedIndex.row] getFriendAt:indexPath.row].name;
+    if(tableView == self.friendsTable){
+        cell.textLabel.text = [currentPerson getFriendAt:indexPath.row].name;
+    }
+    if(tableView == self.postsTable){
+        cell.textLabel.text = [currentPerson getFriendPostAt:indexPath.row];
+        //cell.textLabel.text = @"abc";
+    }
     return cell;
 }
 

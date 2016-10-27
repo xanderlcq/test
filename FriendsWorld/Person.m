@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Person.h"
-@implementation Person{
-    
-}
+@implementation Person
+
 -(void) addFriend:(Person *) person{
     [friendsList append:person];
 }
@@ -23,6 +22,8 @@
     if(self){
         friendsList = [[LinkedList alloc] init];
         [friendsList setup];
+        postsList = [[LinkedList alloc] init];
+        [postsList setup];
         self.isDeleted = NO;
     }
     return self;
@@ -33,6 +34,8 @@
         self.name = name;
         friendsList = [[LinkedList alloc] init];
         [friendsList setup];
+        postsList = [[LinkedList alloc] init];
+        [postsList setup];
         self.isDeleted = NO;
     }
     return self;
@@ -89,4 +92,35 @@
     }
     return -1;
 }
+// POSTING
+-(NSString *) getPostAt:(int) index{
+    return ((Post *)[postsList getDataAt:index]).content;
+}
+-(int)countPosts{
+    return [postsList length];
+}
+-(void) addPost:(NSString *) post{
+    [postsList append:[[Post alloc] initWithContent:post]];
+}
+-(void) removePostAt:(int) index{
+    [postsList removeAt:index];
+}
+-(int) countFriendPosts{
+    [self updateFriendPosts];
+    return [friendsPosts length];
+}
+-(NSString *) getFriendPostAt:(int) index{
+    [self updateFriendPosts];
+    return ((Post *)[postsList getDataAt:index]).content;
+}
+-(void) updateFriendPosts{
+    for(int i = 0;i<[friendsList length];i++){
+        [friendsPosts appendList:[[self getFriendAt:i] getPostsList]];
+    }
+}
+-(LinkedList *) getPostsList{
+    return postsList;
+}
+
+
 @end

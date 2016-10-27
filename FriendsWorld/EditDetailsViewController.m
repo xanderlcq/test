@@ -17,14 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.nameOutlet.text = [self.world getFriendAt:(int)self.selectedIndex.row].name;
+    currentPerson = [self.world getFriendAt:(int)self.selectedIndex.row];
+    self.nameOutlet.text = currentPerson.name;
 }
 
 -(Person *)originalPerson{
     if(!_originalPerson){
         _originalPerson = [[Person alloc] initWithName:[NSString stringWithFormat:@"%@",[self.world getFriendAt:(int)self.selectedIndex.row].name]];
-        for(int i = 0; i < [[self.world getFriendAt:(int)self.selectedIndex.row] countFriends];i++){
-            [_originalPerson addFriend:[[self.world getFriendAt:(int)self.selectedIndex.row] getFriendAt:i]];
+        for(int i = 0; i < [currentPerson countFriends];i++){
+            [_originalPerson addFriend:[currentPerson getFriendAt:i]];
         }
     }
     return _originalPerson;
@@ -43,26 +44,25 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self.world getFriendAt:(int)self.selectedIndex.row] countFriends];
+    return [currentPerson countFriends];
     //return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.textLabel.text = [[self.world getFriendAt:(int)self.selectedIndex.row] getFriendAt:(int)indexPath.row].name;
+    cell.textLabel.text = [currentPerson getFriendAt:(int)indexPath.row].name;
     return cell;
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return YES if you want the specified item to be editable.
     return YES;
 }
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [[self.world getFriendAt:(int)self.selectedIndex.row] removeFriendAt:(int)indexPath.row];
-        [[self.world getFriendAt:(int)self.selectedIndex.row] cleanUpFriendList];
+        [currentPerson removeFriendAt:(int)indexPath.row];
+        [currentPerson cleanUpFriendList];
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
@@ -74,7 +74,7 @@
     if ([[segue identifier] isEqualToString:@"editToDetailDone"]){
         NSLog(@"editToDetailDone");
         PersonDetailViewController *controller = [segue destinationViewController];
-        [self.world getFriendAt:(int)self.selectedIndex.row].name =self.nameOutlet.text;
+        currentPerson.name =self.nameOutlet.text;
         controller.world = self.world;
         controller.selectedIndex = self.selectedIndex;
     }
@@ -92,7 +92,7 @@
         NSLog(@"editToAddFriends");
         NSLog(@"%@",self.originalPerson.name);
         AddFriendsViewController *controller = [segue destinationViewController];
-                [self.world getFriendAt:(int)self.selectedIndex.row].name =self.nameOutlet.text;
+        currentPerson.name =self.nameOutlet.text;
         controller.world = self.world;
         controller.selectedIndex = self.selectedIndex;
         controller.originalPerson = self.originalPerson;

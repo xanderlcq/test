@@ -11,6 +11,9 @@
 #import "EditDetailsViewController.h"
 @interface AddFriendsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     Person *notFriendedFriends;
+    
+    Person *currentPerson;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

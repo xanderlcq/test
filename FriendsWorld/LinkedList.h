@@ -29,5 +29,8 @@
 -(int) indexOf:(id) data;
 -(bool) contains:(id) data;
 -(void) insert:(id) data at:(int) index;
+-(void) appendList:(LinkedList *) list;
+-(Node*) getHead;
+-(Node*) getTail;
 @end
 #endif /* LinkedList_h */

@@ -12,13 +12,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    currentPerson = [self.world getFriendAt:self.selectedIndex.row];
     self.tableView.allowsMultipleSelection = YES;
-    self.nameOutlet.text = [self.world getFriendAt:self.selectedIndex.row].name;
+    self.nameOutlet.text = currentPerson.name;
     notFriendedFriends = [[Person alloc] initWithName:@"notFrindedFriends"];
     
     
     for (int i = 0; i < [self.world countFriends]; i++) {
-        if(i != self.selectedIndex.row && ![[self.world getFriendAt:self.selectedIndex.row] isFriended:[self.world getFriendAt:i]]){
+        if(i != self.selectedIndex.row && ![currentPerson isFriended:[self.world getFriendAt:i]]){
             NSLog(@"isn't friended: %@",[self.world getFriendAt:i].name);
             [notFriendedFriends addFriend:[self.world getFriendAt:i]];
         }else{
@@ -65,7 +66,7 @@ cell.textLabel.text = [notFriendedFriends getFriendAt:indexPath.row].name;
         for(int i = 0; i < [selectedCells count];i++){
             NSIndexPath *tempIndexPath =(NSIndexPath *)[selectedCells objectAtIndex:i];
             int row = (int)tempIndexPath.row;
-            [[self.world getFriendAt:self.selectedIndex.row] addFriend:[notFriendedFriends getFriendAt:row]];
+            [currentPerson addFriend:[notFriendedFriends getFriendAt:row]];
         }
 
         controller.world = self.world;

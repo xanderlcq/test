@@ -31,6 +31,8 @@
         [_world addFriend:[[Person alloc] initWithName:@"john3"]];
         [_world addFriend:[[Person alloc] initWithName:@"john4"]];
         [[_world getFriendAt:0] addFriend:[_world getFriendAt:1]];
+        [[_world getFriendAt:1] addPost:@"john 2 what the fuck"];
+        [[_world getFriendAt:0] addPost:@"john 1 what the fuck"];
     }
     return _world;
 }

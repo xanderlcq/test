@@ -15,6 +15,12 @@
 -(void) setup{
     size = 0;
 }
+-(Node*) getHead{
+    return head;
+}
+-(Node*) getTail{
+    return tail;
+}
 -(void) append:(id) data{
     size++;
     if(head == nil){
@@ -25,6 +31,12 @@
         tail.next = temp;
         tail = temp;
     }
+}
+-(void) appendList:(LinkedList *) list{
+    tail.next = [list getHead];
+    tail = [list getTail];
+    size += [list length];
+    
 }
 -(void) prepend:(id) data{
     size++;
