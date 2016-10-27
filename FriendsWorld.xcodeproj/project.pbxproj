@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C02E2E891DB6FE420038F472 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02E2E881DB6FE420038F472 /* MainTableViewController.m */; };
 		C02E2E921DB71A390038F472 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02E2E911DB71A390038F472 /* NavigationViewController.m */; };
+		C060E3A01DC06EE0000EE764 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C060E39F1DC06EE0000EE764 /* SearchResultsViewController.m */; };
 		C06B20CE1DB84AF100F38B67 /* EditDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B20CD1DB84AF100F38B67 /* EditDetailsViewController.m */; };
 		C06B20D11DB84AFB00F38B67 /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B20D01DB84AFB00F38B67 /* PersonDetailViewController.m */; };
 		C06B20D41DB84B0500F38B67 /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B20D31DB84B0500F38B67 /* AddPersonViewController.m */; };
@@ -47,6 +48,8 @@
 		C02E2E881DB6FE420038F472 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		C02E2E901DB71A390038F472 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		C02E2E911DB71A390038F472 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		C060E39E1DC06EE0000EE764 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
+		C060E39F1DC06EE0000EE764 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		C06B20CC1DB84AF100F38B67 /* EditDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDetailsViewController.h; sourceTree = "<group>"; };
 		C06B20CD1DB84AF100F38B67 /* EditDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDetailsViewController.m; sourceTree = "<group>"; };
 		C06B20CF1DB84AFB00F38B67 /* PersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailViewController.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				C06B20D01DB84AFB00F38B67 /* PersonDetailViewController.m */,
 				C06B20D21DB84B0500F38B67 /* AddPersonViewController.h */,
 				C06B20D31DB84B0500F38B67 /* AddPersonViewController.m */,
+				C060E39E1DC06EE0000EE764 /* SearchResultsViewController.h */,
+				C060E39F1DC06EE0000EE764 /* SearchResultsViewController.m */,
 				C06B20D51DB84B0D00F38B67 /* AddFriendsViewController.h */,
 				C06B20D61DB84B0D00F38B67 /* AddFriendsViewController.m */,
 				C0A4DC191DAC7CF400A1A478 /* Assets.xcassets */,
@@ -316,6 +321,7 @@
 				C06B20D71DB84B0D00F38B67 /* AddFriendsViewController.m in Sources */,
 				C06B20D11DB84AFB00F38B67 /* PersonDetailViewController.m in Sources */,
 				C0762FDF1DB48D910070D581 /* Person.m in Sources */,
+				C060E3A01DC06EE0000EE764 /* SearchResultsViewController.m in Sources */,
 				C0A4DC4B1DAC7EC400A1A478 /* Node.m in Sources */,
 				C06B20D41DB84B0500F38B67 /* AddPersonViewController.m in Sources */,
 				C02E2E891DB6FE420038F472 /* MainTableViewController.m in Sources */,

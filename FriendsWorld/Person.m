@@ -51,7 +51,9 @@
     int i = (int)index;
     return [friendsList getDataAt:i];
 }
-
+-(int) indexOf:(Person *) p{
+    return [friendsList indexOf:p];
+}
 -(Person *) getFriendAtInt:(int)index{
     return [friendsList getDataAt:index];
 }
@@ -70,5 +72,21 @@
 }
 -(void) removeFriendAt:(int) index{
     [self.getFriendsList removeAt:index];
+}
+-(NSArray *) friendsToArray{
+    NSMutableArray *mArray = [[NSMutableArray alloc] init];
+    for(int i = 0;i<[self countFriends];i++){
+        [mArray addObject:[self getFriendAt:i].name];
+    }
+    return mArray;
+    
+}
+-(int) indexOfName:(NSString *) name{
+    for(int i = 0; i <[self countFriends];i++){
+        if([self getFriendAt:i].name == name){
+            return i;
+        }
+    }
+    return -1;
 }
 @end

@@ -17,7 +17,7 @@
 
 @property Person *world;
 @property NSIndexPath *selectedIndex;
-@property Person *originalPerson;
+@property (strong, nonatomic)Person *originalPerson;
 @property (weak, nonatomic) IBOutlet UITextField *nameOutlet;
 
 @end

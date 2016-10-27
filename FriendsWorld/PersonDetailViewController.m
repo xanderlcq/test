@@ -12,13 +12,13 @@
 
 @end
 
-@implementation PersonDetailViewController
+@implementation PersonDetailViewController{
+    Person *currentPerson;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.nameOutlet.text = [self.world getFriendAt:self.selectedIndex.row].name;
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +67,5 @@
         
     }
 }
-//
-
 
 @end

@@ -10,7 +10,11 @@
 #import "Person.h"
 #import "PersonDetailViewController.h"
 #import "AddPersonViewController.h"
-@interface MainTableViewController : UITableViewController
+#import "SearchResultsViewController.h"
+@interface MainTableViewController : UITableViewController <UISearchResultsUpdating, UISearchControllerDelegate>
 @property Person *world;
-
+- (IBAction)searchButton:(id)sender;
+@property (strong, nonatomic) UISearchController *controller;
+@property (strong, nonatomic) NSArray *results;
+@property NSArray *namesArrayForSearching;
 @end

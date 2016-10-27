@@ -33,7 +33,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="bFK-3C-hzq" kind="showDetail" identifier="mainToDetail" id="j7d-RF-ctX"/>
+                                    <segue destination="bFK-3C-hzq" kind="show" identifier="mainToDetail" action="showDetailViewController:sender:" id="j7d-RF-ctX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -44,7 +44,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="World" id="8lY-9c-D0x">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="search" id="vN6-Ah-IIO"/>
+                            <barButtonItem systemItem="search" id="vN6-Ah-IIO">
+                                <connections>
+                                    <action selector="searchButton:" destination="qvq-cO-CWQ" id="a5F-E1-aVb"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="add" id="sv9-PY-Eb9">
                                 <connections>
                                     <segue destination="NWb-ar-Jdc" kind="presentation" identifier="mainToAddPerson" id="nrV-VQ-aE8"/>
@@ -96,11 +100,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JYQ-7Z-J60" id="yPA-2N-FQF">
-                                            <frame key="frameInset" width="343" height="43"/>
+                                            <frame key="frameInset" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h2H-lz-HJt">
-                                                    <frame key="frameInset" minX="15" width="313" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="313" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -164,18 +168,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Editing" id="OHA-Ix-GIQ">
-                                        <leftBarButtonItems>
-                                            <barButtonItem title="Cancel" id="wtX-UW-XQh">
-                                                <connections>
-                                                    <segue destination="bFK-3C-hzq" kind="presentation" identifier="editToDetailCancel" id="w30-Lh-aEu"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem systemItem="trash" id="XhN-uy-veF">
-                                                <connections>
-                                                    <segue destination="w7J-oa-Q17" kind="presentation" identifier="editToMainDelete" id="8UJ-FU-KDk"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </leftBarButtonItems>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wtX-UW-XQh">
+                                            <connections>
+                                                <segue destination="bFK-3C-hzq" kind="presentation" identifier="editToDetailCancel" id="w30-Lh-aEu"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="GHv-v8-i3V">
                                             <connections>
                                                 <segue destination="bFK-3C-hzq" kind="presentation" identifier="editToDetailDone" id="eP2-fl-51w"/>
@@ -291,11 +288,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lP7-WV-cr6" id="L5c-NO-PP2">
-                                            <frame key="frameInset" width="343" height="43"/>
+                                            <frame key="frameInset" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ob9-DX-mPb">
-                                                    <frame key="frameInset" minX="15" width="313" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="313" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -389,11 +386,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="glX-jS-1ac" id="3jQ-I5-BbG">
-                                            <frame key="frameInset" width="343" height="43"/>
+                                            <frame key="frameInset" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tU5-6m-ig2">
-                                                    <frame key="frameInset" minX="15" width="313" height="43"/>
+                                                    <frame key="frameInset" minX="15" width="313" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -445,10 +442,50 @@
             </objects>
             <point key="canvasLocation" x="829.60000000000002" y="81.409295352323838"/>
         </scene>
+        <!--Search Results View Controller-->
+        <scene sceneID="dM9-n1-tE0">
+            <objects>
+                <tableViewController storyboardIdentifier="SearchResults" id="UTF-wO-88t" customClass="SearchResultsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bsC-Pu-eav">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="FEa-Mb-F6K" style="IBUITableViewCellStyleDefault" id="PdJ-Oq-ciS">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PdJ-Oq-ciS" id="t9A-sJ-Nd0">
+                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FEa-Mb-F6K">
+                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="bFK-3C-hzq" kind="showDetail" identifier="searchToDetail" id="jWP-Fz-9nl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UTF-wO-88t" id="31d-2Y-waq"/>
+                            <outlet property="delegate" destination="UTF-wO-88t" id="jDq-P2-4Kz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwa-5j-gBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="820"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="HpX-cp-dDP"/>
+        <segue reference="jWP-Fz-9nl"/>
         <segue reference="UEZ-23-bGd"/>
-        <segue reference="i57-1u-2d7"/>
-        <segue reference="w30-Lh-aEu"/>
     </inferredMetricsTieBreakers>
 </document>

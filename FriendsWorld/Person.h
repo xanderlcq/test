@@ -23,5 +23,8 @@
 -(int) countFriends;
 -(void) cleanUpFriendList;
 -(void) removeFriendAt:(int) index;
+-(NSArray *) friendsToArray;
+-(int) indexOf:(Person *) p;
+-(int) indexOfName:(NSString *) name;
 @end
 #endif /* Person_h */
