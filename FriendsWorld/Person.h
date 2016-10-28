@@ -36,7 +36,7 @@
 -(void) addPost:(NSString *) post;
 -(void) removePostAt:(int) index;
 -(int) countFriendPosts;
--(NSString *) getFriendPostAt:(int) index;
+-(Post *) getFriendPostAt:(int) index;
 -(void) updateFriendPosts;
 
 @end

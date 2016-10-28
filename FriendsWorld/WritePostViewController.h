@@ -1,24 +1,23 @@
 //
-//  PersonDetailViewController.h
+//  WritePostViewController.h
 //  FriendsWorld
 //
-//  Created by Xander on 10/19/16.
+//  Created by Xander on 10/27/16.
 //  Copyright © 2016 Xander. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
-#import "MainTableViewController.h"
-#import "EditDetailsViewController.h"
-#import "WritePostViewController.h"
 #import "Post.h"
-@interface PersonDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+#import "PersonDetailViewController.h"
+@interface WritePostViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>{
     Person *currentPerson;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *navi;
-@property (weak, nonatomic) IBOutlet UITableView *friendsTable;
 @property (weak, nonatomic) IBOutlet UITableView *postsTable;
+@property (weak, nonatomic) IBOutlet UITextView *textInputOutlet;
+- (IBAction)postButton:(id)sender;
 
 
 @property Person *world;

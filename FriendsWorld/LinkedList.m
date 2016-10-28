@@ -33,10 +33,15 @@
     }
 }
 -(void) appendList:(LinkedList *) list{
-    tail.next = [list getHead];
-    tail = [list getTail];
-    size += [list length];
-    
+    if(!head){
+        head = [list getHead];
+        tail = [list getTail];
+        size += [list length];
+    }else{
+        tail.next = [list getHead];
+        tail = [list getTail];
+        size += [list length];
+    }
 }
 -(void) prepend:(id) data{
     size++;

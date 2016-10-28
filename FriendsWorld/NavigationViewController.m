@@ -26,13 +26,13 @@
 -(Person *)world{
     if(!_world){
         _world = [[Person alloc] initWithName:@"world"];
-        [_world addFriend:[[Person alloc] initWithName:@"john1"]];
-        [_world addFriend:[[Person alloc] initWithName:@"john2"]];
-        [_world addFriend:[[Person alloc] initWithName:@"john3"]];
-        [_world addFriend:[[Person alloc] initWithName:@"john4"]];
+        [_world addFriend:[[Person alloc] initWithName:@"Xander Li"]];
+        [_world addFriend:[[Person alloc] initWithName:@"Mr. Bakker"]];
+        [_world addFriend:[[Person alloc] initWithName:@"Sean"]];
+        [_world addFriend:[[Person alloc] initWithName:@"John"]];
         [[_world getFriendAt:0] addFriend:[_world getFriendAt:1]];
-        [[_world getFriendAt:1] addPost:@"john 2 what the fuck"];
-        [[_world getFriendAt:0] addPost:@"john 1 what the fuck"];
+        [[_world getFriendAt:1] addPost:@"HW on the desk plz?"];
+        [[_world getFriendAt:0] addPost:@"Hello from Xander"];
     }
     return _world;
 }

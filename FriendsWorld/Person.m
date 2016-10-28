@@ -24,6 +24,8 @@
         [friendsList setup];
         postsList = [[LinkedList alloc] init];
         [postsList setup];
+        friendsPosts = [[LinkedList alloc] init];
+        [friendsPosts setup];
         self.isDeleted = NO;
     }
     return self;
@@ -36,6 +38,8 @@
         [friendsList setup];
         postsList = [[LinkedList alloc] init];
         [postsList setup];
+        friendsPosts = [[LinkedList alloc] init];
+        [friendsPosts setup];
         self.isDeleted = NO;
     }
     return self;
@@ -100,7 +104,9 @@
     return [postsList length];
 }
 -(void) addPost:(NSString *) post{
-    [postsList append:[[Post alloc] initWithContent:post]];
+    Post *temp =[[Post alloc] initWithContent:post];
+    temp.poster = self.name;
+    [postsList append:temp];
 }
 -(void) removePostAt:(int) index{
     [postsList removeAt:index];
@@ -109,12 +115,13 @@
     [self updateFriendPosts];
     return [friendsPosts length];
 }
--(NSString *) getFriendPostAt:(int) index{
+-(Post *) getFriendPostAt:(int) index{
     [self updateFriendPosts];
-    return ((Post *)[postsList getDataAt:index]).content;
+    return [friendsPosts getDataAt:index];
 }
 -(void) updateFriendPosts{
     for(int i = 0;i<[friendsList length];i++){
+        [friendsPosts clear];
         [friendsPosts appendList:[[self getFriendAt:i] getPostsList]];
     }
 }

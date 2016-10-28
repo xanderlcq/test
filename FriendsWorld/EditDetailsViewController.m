@@ -63,7 +63,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [currentPerson removeFriendAt:(int)indexPath.row];
         [currentPerson cleanUpFriendList];
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 

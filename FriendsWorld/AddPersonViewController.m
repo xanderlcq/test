@@ -42,8 +42,7 @@
         Person *temp =[[Person alloc] initWithName:self.nameOutlet.text];
         for(int i = 0; i < [selectedCells count];i++){
             NSIndexPath *tempIndexPath =(NSIndexPath *)[selectedCells objectAtIndex:i];
-            int row = tempIndexPath.row;
-            [temp addFriend:[self.world getFriendAt:row]];
+            [temp addFriend:[self.world getFriendAt:(int)tempIndexPath.row]];
         }
         [self.world addFriend:temp];
         controller.world = self.world;
@@ -70,7 +69,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.world getFriendAt:indexPath.row].name;
+    cell.textLabel.text = [self.world getFriendAt:(int)indexPath.row].name;
     return cell;
 }
 

@@ -11,6 +11,7 @@
 @interface Post: NSObject
 @property NSString *content;
 @property NSDate *timeStamp;
+@property NSString *poster;
 -(id) initWithContent:(NSString *) content;
 @end
 

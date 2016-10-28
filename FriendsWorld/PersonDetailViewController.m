@@ -43,11 +43,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     if(tableView == self.friendsTable){
-        cell.textLabel.text = [currentPerson getFriendAt:indexPath.row].name;
+        cell.textLabel.text = [currentPerson getFriendAt:(int)indexPath.row].name;
     }
     if(tableView == self.postsTable){
-        cell.textLabel.text = [currentPerson getFriendPostAt:indexPath.row];
-        //cell.textLabel.text = @"abc";
+        
+        
+        Post *temp = [currentPerson getFriendPostAt:(int)indexPath.row];
+        NSString *postDisplay = [NSString stringWithFormat:@"%@: %@",temp.poster,temp.content];
+        cell.textLabel.text = postDisplay;
+       
     }
     return cell;
 }
@@ -69,13 +73,14 @@
         controller.selectedIndex = self.selectedIndex;
         
     }
-    if ([[segue identifier] isEqualToString:@"editToAddFriends"]){
-        NSLog(@"editToAddFriends");
-        EditDetailsViewController *controller = [segue destinationViewController];
+    if ([[segue identifier] isEqualToString:@"detailToWritePost"]){
+        NSLog(@"detailToWritePost");
+        WritePostViewController *controller = [segue destinationViewController];
         controller.world = self.world;
         controller.selectedIndex = self.selectedIndex;
-        
+
     }
+    
 }
 
 @end

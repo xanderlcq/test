@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    currentPerson = [self.world getFriendAt:self.selectedIndex.row];
+    currentPerson = [self.world getFriendAt:(int)self.selectedIndex.row];
     self.tableView.allowsMultipleSelection = YES;
     self.nameOutlet.text = currentPerson.name;
     notFriendedFriends = [[Person alloc] initWithName:@"notFrindedFriends"];
@@ -40,19 +40,17 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning TODO
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning TODO
     return [notFriendedFriends countFriends];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-cell.textLabel.text = [notFriendedFriends getFriendAt:indexPath.row].name;
+cell.textLabel.text = [notFriendedFriends getFriendAt:(int)indexPath.row].name;
     return cell;
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
