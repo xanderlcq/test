@@ -26,6 +26,7 @@
         [postsList setup];
         friendsPosts = [[LinkedList alloc] init];
         [friendsPosts setup];
+        friendsPostsArray = [[NSArray alloc] init];
         self.isDeleted = NO;
     }
     return self;
@@ -34,6 +35,7 @@
     self = [super init];
     if(self){
         self.name = name;
+        friendsPostsArray = [[NSArray alloc] init];
         friendsList = [[LinkedList alloc] init];
         [friendsList setup];
         postsList = [[LinkedList alloc] init];
@@ -97,8 +99,8 @@
     return -1;
 }
 // POSTING
--(NSString *) getPostAt:(int) index{
-    return ((Post *)[postsList getDataAt:index]).content;
+-(Post *) getPostAt:(int) index{
+    return [postsList getDataAt:index];
 }
 -(int)countPosts{
     return [postsList length];
@@ -117,13 +119,19 @@
 }
 -(Post *) getFriendPostAt:(int) index{
     [self updateFriendPosts];
-    return [friendsPosts getDataAt:index];
+    return [friendsPostsArray objectAtIndex:index];
 }
 -(void) updateFriendPosts{
+    [friendsPosts clear];
+    
     for(int i = 0;i<[friendsList length];i++){
-        [friendsPosts clear];
         [friendsPosts appendList:[[self getFriendAt:i] getPostsList]];
     }
+    
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    friendsPostsArray = [[friendsPosts toArray] sortedArrayUsingDescriptors:sortDescriptors];
 }
 -(LinkedList *) getPostsList{
     return postsList;

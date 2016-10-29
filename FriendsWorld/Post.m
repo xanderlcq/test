@@ -14,7 +14,15 @@
     if(self){
         self.content = content;
         self.timeStamp = [NSDate date];
+        comments = [[LinkedList alloc] init];
+        [comments setup];
     }
     return self;
+}
+-(void)addComment:(Post *)comment{
+    [comments append:comment];
+}
+-(Post *) getCommentAt:(int) index{
+    return [comments getDataAt:index];
 }
 @end

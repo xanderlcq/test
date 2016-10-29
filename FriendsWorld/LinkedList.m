@@ -206,4 +206,11 @@
         [self insertHelper:data currentNode:n.next at:index-1];
     }
 }
+-(NSArray *)toArray{
+    NSMutableArray *mArray = [[NSMutableArray alloc] init];
+    for(int i = 0;i<[self length];i++){
+        [mArray addObject:[self getDataAt:i]];
+    }
+    return mArray;
+}
 @end

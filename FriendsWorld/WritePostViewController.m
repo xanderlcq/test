@@ -40,7 +40,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     if(tableView == self.postsTable){
-        cell.textLabel.text = [currentPerson getPostAt:(int)indexPath.row];
+        cell.textLabel.text = [currentPerson getPostAt:(int)indexPath.row].content;
     }
     return cell;
 }

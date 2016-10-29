@@ -32,5 +32,6 @@
 -(void) appendList:(LinkedList *) list;
 -(Node*) getHead;
 -(Node*) getTail;
+-(NSArray *) toArray;
 @end
 #endif /* LinkedList_h */

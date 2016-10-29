@@ -13,6 +13,7 @@
     LinkedList *friendsList;
     LinkedList *postsList;
     LinkedList *friendsPosts;
+    NSArray *friendsPostsArray;
     
 }
 @property bool isDeleted;
@@ -31,7 +32,7 @@
 -(int) indexOf:(Person *) p;
 -(int) indexOfName:(NSString *) name;
 -(LinkedList*) getPostsList;
--(NSString *) getPostAt:(int) index;
+-(Post *) getPostAt:(int) index;
 -(int)countPosts;
 -(void) addPost:(NSString *) post;
 -(void) removePostAt:(int) index;
