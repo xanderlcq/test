@@ -63,9 +63,6 @@
 -(int) indexOf:(Person *) p{
     return [friendsList indexOf:p];
 }
--(Person *) getFriendAtInt:(int)index{
-    return [friendsList getDataAt:index];
-}
 -(int) countFriends{
     return [friendsList length];
 }
@@ -88,7 +85,6 @@
         [mArray addObject:[self getFriendAt:i].name];
     }
     return mArray;
-    
 }
 -(int) indexOfName:(NSString *) name{
     for(int i = 0; i <[self countFriends];i++){
@@ -98,7 +94,6 @@
     }
     return -1;
 }
-// POSTING
 -(Post *) getPostAt:(int) index{
     return [postsList getDataAt:index];
 }

@@ -25,4 +25,7 @@
 -(Post *) getCommentAt:(int) index{
     return [comments getDataAt:index];
 }
+-(int) countComments{
+    return [comments length];
+}
 @end

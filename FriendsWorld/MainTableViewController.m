@@ -97,10 +97,11 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
         [self.world getFriendAt:(int)indexPath.row].isDeleted = YES;
-        self.namesArrayForSearching = [self.world friendsToArray];
+        
         [self cleanUpAllFriends];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
+        self.namesArrayForSearching = [self.world friendsToArray];
 }
 
 -(void) cleanUpAllFriends{
