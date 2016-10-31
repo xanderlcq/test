@@ -41,13 +41,14 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
     if(tableView == self.friendsTable){
         cell.textLabel.text = [currentPerson getFriendAt:(int)indexPath.row].name;
     }
+    
     if(tableView == self.postsTable){
-        
-        
         Post *temp = [currentPerson getFriendPostAt:(int)indexPath.row];
         NSString *postDisplay = [NSString stringWithFormat:@"%@: %@",temp.poster,temp.content];
         cell.textLabel.text = postDisplay;

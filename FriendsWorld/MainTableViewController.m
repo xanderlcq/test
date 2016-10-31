@@ -33,11 +33,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//default initializer of object controller
 - (UISearchController *)controller {
     
     if (!_controller) {
         
-        // instantiate search results table view
+        // create search results table view
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         SearchResultsViewController *resultsController = [storyboard instantiateViewControllerWithIdentifier:@"SearchResults"];
         
@@ -45,7 +46,7 @@
         _controller = [[UISearchController alloc]initWithSearchResultsController:resultsController];
         _controller.searchResultsUpdater = self;
         
-        // optional: set the search controller delegate
+        // set the search controller delegate
         _controller.delegate = self;
         
     }
@@ -61,7 +62,7 @@
         controller.selectedIndex = [self.tableView indexPathForSelectedRow];
     }
     if ([[segue identifier] isEqualToString:@"mainToAddPerson"]){
-        NSLog(@"seg triggered");
+        NSLog(@"mainToAddPerson");
         AddPersonViewController *controller = [segue destinationViewController];
         controller.world = self.world;
     }
@@ -87,12 +88,11 @@
     return cell;
 }
 
-//Stack overflow
+//Stack overflow, Deleting function
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return YES if you want the specified item to be editable.
     return YES;
 }
-// Override to support editing the table view.
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
@@ -115,15 +115,15 @@
 # pragma mark - Search Results Updater
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    // filter the search results (Stack Overflow)
+    // filter search result from a NSArray of names (NSString *)
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains [cd] %@", self.controller.searchBar.text];
     self.results = [self.namesArrayForSearching filteredArrayUsingPredicate:predicate];
 
 }
 
 - (IBAction)searchButton:(id)sender {
+    //Present search view
     [self presentViewController:self.controller animated:YES completion:nil];
-    
 }
 
 

@@ -69,7 +69,7 @@
 -(void) cleanUpFriendList{
     int i = 0;
     while(i<[self countFriends]){
-        if([self getFriendAtInt:i].isDeleted){
+        if([self getFriendAt:i].isDeleted){
             [self removeFriendAt:i];
         }else{
             i++;

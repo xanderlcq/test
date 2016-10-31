@@ -10,5 +10,6 @@
 #import "Person.h"
 #import "MainTableViewController.h"
 @interface NavigationViewController : UINavigationController
+//World contains all person in this world
 @property  (strong, nonatomic) Person *world;
 @end

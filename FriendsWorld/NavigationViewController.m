@@ -23,6 +23,7 @@
     // Do any additional setup after loading the view.
 }
 
+//Default variable initializer, add some dummy person to the world.
 -(Person *)world{
     if(!_world){
         _world = [[Person alloc] initWithName:@"world"];

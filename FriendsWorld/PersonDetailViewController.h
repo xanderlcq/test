@@ -17,9 +17,11 @@
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *navi;
+//Table view that displays friends of this person
 @property (weak, nonatomic) IBOutlet UITableView *friendsTable;
-@property (weak, nonatomic) IBOutlet UITableView *postsTable;
 
+//Table view that displays the posts by this person's friends
+@property (weak, nonatomic) IBOutlet UITableView *postsTable;
 
 @property Person *world;
 @property NSIndexPath *selectedIndex;

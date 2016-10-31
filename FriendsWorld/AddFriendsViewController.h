@@ -10,8 +10,8 @@
 #import "Person.h"
 #import "EditDetailsViewController.h"
 @interface AddFriendsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+    //Friends list of people who aren't friends with this person, and excluding this person itself.
     Person *notFriendedFriends;
-    
     Person *currentPerson;
     
 }

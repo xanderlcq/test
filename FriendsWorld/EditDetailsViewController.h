@@ -19,7 +19,9 @@
 
 @property Person *world;
 @property NSIndexPath *selectedIndex;
-@property (strong, nonatomic)Person *originalPerson;
 @property (weak, nonatomic) IBOutlet UITextField *nameOutlet;
+//OriginalPerson is the version of the person before editting, just in case user want to cancel the edits
+@property (strong, nonatomic)Person *originalPerson;
+
 
 @end
