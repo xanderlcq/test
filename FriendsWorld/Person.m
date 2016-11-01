@@ -117,6 +117,7 @@
     return [friendsPostsArray objectAtIndex:index];
 }
 -(void) updateFriendPosts{
+    [self cleanUpFriendList];
     [friendsPosts clear];
     
     for(int i = 0;i<[friendsList length];i++){

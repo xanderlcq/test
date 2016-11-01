@@ -20,7 +20,9 @@
     currentPerson = [self.world getFriendAt:(int)self.selectedIndex.row];
     self.nameOutlet.text = currentPerson.name;
 }
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 -(Person *)originalPerson{
     if(!_originalPerson){
         _originalPerson = [[Person alloc] initWithName:[NSString stringWithFormat:@"%@",[self.world getFriendAt:(int)self.selectedIndex.row].name]];
